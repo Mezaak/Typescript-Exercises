@@ -11,8 +11,11 @@ const krediPayment = 0;
 const havalePayment = 1;
 const eftPayment = 2;
 
-enum Payment {kredi,havale,eft}
+//yukarı ile aşağının bir alakası yok
 
-let kredi = Payment.kredi;
-let havale = Payment.havale;
-let eft = Payment.eft;
+enum Payment {kredi=0,havale=1,kapidaodeme=2,eft=3}
+
+let kredi = Payment.kredi; //0
+let havale = Payment.havale; // 1
+let kapidaodeme = Payment.kapidaodeme; //2
+let eft = Payment.eft; // 3
