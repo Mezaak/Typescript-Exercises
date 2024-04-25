@@ -3,15 +3,24 @@ interface Point {
     y:number
 }
 
-interface Passenger{
-    name:string;
-    phone:string;
-}
-
 interface Vehicle{
     currentLocation: Point;
     travelTo(point:Point):void;
-    getDistance(pointA:Point,pointB:Point):number;
-    addPassengers(passenger:Passenger):void;
-    removePassenger(passenger:Passenger):void;
+    
+}
+
+class Taxi implements Vehicle {
+    // ..
+    currentLocation: Point;
+    travelTo(point:Point):void{
+        console.log(`taxi X:${point.x} Y:${point.y} konumuna gidiyor`);
+    }
+}
+
+class Bus implements Vehicle{
+    // ..
+    currentLocation: Point;
+    travelTo(point:Point):void{
+        console.log(`bus X:${point.x} Y:${point.y} konumuna gidiyor`);
+    }
 }
